@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Моя биография</title>
+  <link rel="stylesheet" href="css/bio_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="assets/images/avatar.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="enot" content="0cb63219" />
+</head>
+
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="user-info">
+        <div class="avatar">
+          <img src="assets/images/avatar.png">
+        </div>
+        <div class="username">RafKik</div>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-ellipsis-v"></i></div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu">
+        <ul>
+          <li onclick="clearChat()">Очистить историю чата</li>
+          <hr>
+          <li onclick="toggleMenu()">Отмена</li>
+        </ul>
+      </div>
+    </div>
+    <div class="profile-popup-container" id="profilePopupContainer">
+      <div class="profile-popup">
+        <div class="profile-content">
+          <div class="profile-header">
+            <img class="profile-avatar" src="assets/images/avatar.png" alt="Avatar">
+            <h3 class="profile-username">RafKik</h3>
+          </div>
+          <hr class="profile-hr">
+          <p class="profile-about">Обо мне</p>
+          <p class="profile-bio">😘</p>
+          <hr class="profile-hr">
+          <div class="social-icons">
+            <a href="https://discord.com/users/745210837006024795" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://t.me/umoloduhin" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://github.com/rafkik" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <button class="profile-btn-close" onclick="closePopup()">Закрыть</button>
+      </div>
+    </div>
+    <div class="message-container" id="messageContainer">
+    </div>
+    <div class="input-container">
+      <input type="text" id="messageInput" placeholder="Напиши своё сообщение..." onkeypress="handleKeyPress(event)">
+      <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <audio id="messageSound">
+    <source src="assets/audio/bio/message.mp3" type="audio/mpeg">
+  </audio>
+  <script src="https://kit.fontawesome.com/32d3517338.js" crossorigin="anonymous"></script>
+  <script src="js/bio_script.js"></script>
+</body>
+
+</html>
