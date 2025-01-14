@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.centerbox {
+    background-color: #19e2e2;
+    width: 30vw;
+    height: 30vh;
+    align-self: center;
+    margin: auto;
+    text-align: center;
+    color: #000;
+}
